@@ -74,18 +74,19 @@
         // TARGET
         // ----------------------------------------------------------------------------------------------
         // | ESC Q |   D   |   R   |   W   |   B   |            |   J   |   F   |   U   |   P   |   ;   |
-        // |   A   |   S   |   H   |   T   |   G   |            |   Y   |   N   |   E   |   O   |  L '  |
+        // |   A   |   S   |   H   |   T   |   G   |            |   Y   |   N   |   E   |   O   |  I '  |
         // | LSFT Z|   X   |   M   |   C   |   V   |            |   K   |   L   |   ,   |   .   | RET / |
         //                         | LSHFT | LOWER |            | RAISE | SPACE |
 
        		default_layer {
 		bindings = <
 		&mt ESC Q   &kp D &kp R &kp W &kp B 						&kp J     &kp F   &kp U     &kp P   &kp SEMI 
-		&kp A       &kp S &kp H &kp T &kp G 			      &kp Y     &kp N   &kp E     &kp O   &mt APOS L
-		&kp Z       &kp X &kp M &kp C &kp V				      &kp N     &kp M   &kp CMMA  &kp DOT &kp RET
+		&kp A       &kp S &kp H &kp T &kp G 			      &kp Y     &kp N   &kp E     &kp O   &mt APOS I
+		&kp Z       &kp X &kp M &kp C &kp V				      &kp K     &kp L   &kp CMMA  &kp DOT &kp RET
           				    &kp LSHFT   &mo LOWER  				&mo RAISE &kp SPACE 
 		>;
 		};
+       WHAT 
 
         // ----------------------------------------------------------------------------------------------
         // |   1   |   2   |   3   |   4   |   5   |            |   6   |   7   |   8   |   9   |   0   |
@@ -102,6 +103,8 @@
 		>;
 		};
 		
+
+
 		right_layer {
 		bindings = <
 		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp BSPC 
