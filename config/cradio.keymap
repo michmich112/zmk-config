@@ -74,14 +74,14 @@
         // TARGET
         // ----------------------------------------------------------------------------------------------
         // | ESC Q |   D   |   R   |   W   |   B   |            |   J   |   F   |   U   |   P   |   ;   |
-        // |   A   |   S   |   H   |   T   |   G   |            |   Y   |   N   |   E   |   O   |  I '  |
-        // | LSFT Z|   X   |   M   |   C   |   V   |            |   K   |   L   |   ,   |   .   | RET / |
+        // |   A   |   S   |   H   |   T   |   G   |            |   Y   |   N   |   E   |   O   |   I   |
+        // |   Z   |   X   |   M   |   C   |   V   |            |   K   |   L   |   ,   |   .   |  RET  |
         //                         | LSHFT | LOWER |            | RAISE | SPACE |
 
        		default_layer {
 		bindings = <
 		&mt ESC Q   &kp D &kp R &kp W &kp B 						&kp J     &kp F   &kp U     &kp P   &kp SEMI 
-		&kp A       &kp S &kp H &kp T &kp G 			      &kp Y     &kp N   &kp E     &kp O   &mt APOS I
+		&kp A       &kp S &kp H &kp T &kp G 			      &kp Y     &kp N   &kp E     &kp O   &kp I
 		&kp Z       &kp X &kp M &kp C &kp V				      &kp K     &kp L   &kp CMMA  &kp DOT &kp RET
           				    &kp LSHFT   &mo LOWER  				&mo RAISE &kp SPACE 
 		>;
@@ -89,27 +89,32 @@
 
         // ----------------------------------------------------------------------------------------------
         // |   1   |   2   |   3   |   4   |   5   |            |   6   |   7   |   8   |   9   |   0   |
-        // |  TAB  |   S   |   D   |   F   |   G   |            |   H   |   J   |   K   |   L   |   "   |
-        // | LSFT Z|   X   |   C   |   V   |   B   |            |   N   |   M   |   ,   |   .   |  RET  |
-        //                         | LOWER |  LCTL |            | SPACE | RAISE |
+        // |  TAB  |   ^   |   &   |   *   |   (   |            |   )   |   J   |   K   |   L   |   "   |
+        // |  ESC  |   X   |   C   |   V   |   {   |            |   }   |   M   |   ,   |   .   |  RET  |
+        //                         | LOWER |  LCTL |            | RSHFT |  RGUI |
 
        		left_layer {
 		bindings = <
-		&kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5		&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0 
-		&kp TAB    &kp LC(S)    &kp DQT      &kp PIPE2     &kp HASH 		&kp MINUS &kp EQL  &kp LBKT &kp RBKT  &kp DEL 
-		&kp ESC    &kp TILDE 	&kp NON_US_BSLH &kp NON_US_HASH  &kp TILDE2 	&kp MINUS &kp GRAVE &kp LBKT &kp RBKT  &kp DEL 
-					    &kp LGUI &mo LOWER 					&mo RAISE &kp RGUI 
+		&kp N1     &kp N2       &kp N3          &kp N4          &kp N5		        &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
+		&kp TAB    &kp LC(S)    &kp DQT         &kp PIPE2       &kp HASH 		      &kp MINUS &kp EQL   &kp LBKT  &kp RBKT  &kp APOS 
+		&kp ESC    &kp TILDE 	  &kp NON_US_BSLH &kp NON_US_HASH &kp TILDE2 	      &kp MINUS &kp GRAVE &kp LBKT  &kp RBKT  &kp DEL 
+					                                  &kp LGUI        &mo LOWER 				&mo RSHFT &kp RGUI 
 		>;
 		};
 		
+        // ----------------------------------------------------------------------------------------------
+        // |   `   |   2   |   3   |   4   |   [   |            |   ]   |   7   |  UP   |   9   | BSPC  |
+        // |   F1  |   F2  |   F3  |   F4  |   (   |            |   )   | LEFT  |  DOWN | RIGHT |   \   |
+        // |   F7  |   F8  |   F9  |  F10  |   {   |            |   }   |   M   |   ,   |   .   |  RET  |
+        //                         | LSHFT |  LCTL |            | SPACE | RAISE |
 
 
 		right_layer {
 		bindings = <
-		&kp BANG  &kp ATSN &kp HASH  &kp DLLR  &kp PRCT    			&kp CRRT  &kp AMPS &kp KMLT &kp LPRN &kp BKSP 
-		&kp HASH  &kp QMARK  &kp FSLH  &kp COLN  &kp SCLN 			&kp MINUS &kp KP_EQUAL  &kp LBRC  &kp RBRC   &kp BKSP
-		&kp LSFT  &kp KPLS &kp LBKT &kp RBKT   &kp BSLH    			&kp UNDER &kp LEFT &kp DOWN &kp UP  &kp RIGHT
-					 &kp LCTL &mo 3  				&mo RAISE &kp SPC 
+		&kp GRAVE &kp N2    &kp N3      &kp N4      &kp LBKT		      &kp RBKT  &kp N7        &kp UP    &kp N9    &kp BSPC
+		&kp HASH  &kp QMARK &kp FSLH    &kp COLN    &kp LPAR 			    &kp RPAR  &kp LEFT      &kp DOWN  &kp RIGHT &kp BSLH
+		&kp LSFT  &kp KPLS  &kp LBKT    &kp RBKT    &kp LBRC    			&kp RBRC  &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT
+					                          &kp LCTL    &mo 3  				    &mo RAISE &kp SPC 
 		>;
 		};	
 		
