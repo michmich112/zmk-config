@@ -30,6 +30,13 @@
         };
     };
     
+    macros {
+      macro_copy: macro_copy {
+        compatible = "zmk,behavior-macro";
+
+      };
+    };
+    
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -52,11 +59,11 @@
         right_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ ESCAPE   │  1       │  2       │  3       │  COPY    │   │          │ PAGE DN  │  UP      │ PAGE UP  │  :       │
-            &kp ESC    &kp N1     &kp N2     &kp N3     &kp K_COPY     &trans   &kp PG_DN  &kp UARW    &kp PG_UP    &kp COLON
+        //│ ESCAPE   │  1       │  2       │  3       │  COPY    │   │shortcat  │ PAGE DN  │  UP      │ PAGE UP  │  :       │
+            &kp ESC    &kp N1     &kp N2     &kp N3     &kp LG(C)     &kp LG(LA(LS(S)))   &kp PG_DN  &kp UARW    &kp PG_UP    &kp COLON
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB      │  4       │  5       │  6       │  PASTE   │   │          │ LEFT     │ DOWN     │ RIGHT    │  ' "     │
-            HRML(TAB,   N4,        N5,        N6)     &kp K_PASTE      &trans     HRMR(LARW,  DARW,      RARW,   SQT)
+        //│ TAB      │  4       │  5       │  6       │  PASTE   │   │copy hist │ LEFT     │ DOWN     │ RIGHT    │  ' "     │
+            HRML(TAB,   N4,        N5,        N6)       &kp LG(V)     &kp LG(LA(C)) HRMR(LARW,  DARW,      RARW,   SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
