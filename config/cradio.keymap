@@ -29,14 +29,7 @@
             then-layer = <3>;
         };
     };
-    
-    macros {
-      macro_copy: macro_copy {
-        compatible = "zmk,behavior-macro";
 
-      };
-    };
-    
     keymap {
         compatible = "zmk,keymap";
         default_layer {
